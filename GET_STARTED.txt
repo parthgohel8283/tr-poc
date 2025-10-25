@@ -1,0 +1,163 @@
+================================================================================
+    TEAM REPLACE DEMO - QUICK START
+================================================================================
+
+📦 Location: team-replace-demo/
+
+🎯 What is this?
+   A complete, standalone Next.js clone of your Team Replace frontend
+   using 100% dummy data - NO backend or API required!
+
+🚀 GET STARTED IN 3 STEPS:
+
+   1. Open terminal in this directory:
+      cd team-replace-demo
+
+   2. Install dependencies:
+      npm install
+
+   3. Start development server:
+      npm run dev
+
+   4. Open browser:
+      http://localhost:3001
+
+================================================================================
+
+🔑 DEMO LOGIN CREDENTIALS:
+
+   Admin User:
+   -----------
+   Email: admin@teamreplace.com
+   → See ALL quotes & meetings from all users
+
+   Client Users:
+   -------------
+   Email: john.doe@example.com      (has 2 quotes, 2 meetings)
+   Email: jane.smith@example.com    (has 1 quote, 1 meeting)  
+   Email: bob.wilson@example.com    (has 1 quote, 0 meetings)
+   → See only their own data
+
+   How to Login:
+   1. Enter email
+   2. Click "Send Verification Code"
+   3. An ALERT will show you the OTP code (e.g., "123456")
+   4. Enter the OTP code
+   5. Click "Verify & Login"
+
+================================================================================
+
+📄 AVAILABLE PAGES:
+
+   Public Pages:
+   - /              → Home page
+   - /login         → Login page
+   - /teams         → Browse teams catalog
+   - /quote         → Get a quote form
+   - /book          → Book a meeting form
+
+   Client Pages (login as client):
+   - /dashboard     → Your quotes & meetings
+
+   Admin Pages (login as admin):
+   - /admin-dashboard → All quotes & meetings
+
+================================================================================
+
+✨ FEATURES:
+
+   ✅ OTP-based login (simulated)
+   ✅ Role-based dashboards (Admin & Client)
+   ✅ Teams catalog with 5 development teams
+   ✅ Quote request form
+   ✅ Meeting booking form
+   ✅ Data export simulation
+   ✅ Account deletion simulation
+   ✅ Responsive design (mobile-friendly)
+   ✅ TypeScript throughout
+   ✅ Tailwind CSS styling
+
+================================================================================
+
+📚 DOCUMENTATION:
+
+   README.md           → Complete project documentation
+   SETUP_GUIDE.md      → Detailed setup instructions
+   FEATURES.md         → Feature documentation
+   PROJECT_SUMMARY.md  → Overview and statistics
+
+================================================================================
+
+🎨 TECHNOLOGY:
+
+   - Next.js 14 (App Router)
+   - React 18
+   - TypeScript
+   - Tailwind CSS
+   - Zustand (state management)
+   - 100% static data (no API)
+
+================================================================================
+
+💾 DATA:
+
+   All data is dummy/static:
+   - 4 users (1 admin, 3 clients)
+   - 4 quotes with different statuses
+   - 3 meetings with different statuses
+   - 5 teams with detailed info
+   - 4 domain/industry pages
+
+   Data is stored in src/data/ folder as TypeScript files
+
+================================================================================
+
+🔧 CUSTOMIZATION:
+
+   To add more users:    → Edit src/data/users.ts
+   To add more quotes:   → Edit src/data/quotes.ts
+   To add more meetings: → Edit src/data/meetings.ts
+   To add more teams:    → Edit src/data/teams.ts
+
+================================================================================
+
+🚨 DEMO MODE:
+
+   - OTP codes appear in browser alerts (not sent via email)
+   - Form submissions are simulated (no real data saved)
+   - Data resets when you clear browser cache
+   - Perfect for presentations and demos!
+
+================================================================================
+
+🎯 QUICK TEST:
+
+   1. Run: npm run dev
+   2. Visit: http://localhost:3001
+   3. Login with: admin@teamreplace.com
+   4. Check the alert for OTP
+   5. Enter OTP and explore!
+
+================================================================================
+
+📦 COMMANDS:
+
+   npm install          → Install dependencies
+   npm run dev          → Start development server (port 3001)
+   npm run build        → Build for production
+   npm start            → Start production server
+   npm run typecheck    → Check TypeScript errors
+   npm run lint         → Run ESLint
+
+================================================================================
+
+🎉 STATUS: READY TO USE!
+
+   No configuration needed - just install and run!
+
+================================================================================
+
+Questions? Check README.md for full documentation.
+
+Happy demoing! 🚀
+
