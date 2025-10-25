@@ -91,7 +91,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSuccess }) => {
       </Button>
 
       <p className="text-xs text-gray-500 text-center">
-        We'll send you a 6-digit verification code to your email.
+        We&apos;ll send you a 6-digit verification code to your email.
         <br />
         <strong>(Demo: The OTP will appear in an alert)</strong>
       </p>

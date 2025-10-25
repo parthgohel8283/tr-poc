@@ -4,7 +4,7 @@
 
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuthStore } from '@/store/authStore';
 import { AuthenticatedLayout } from '@/components/layout/AuthenticatedLayout';
@@ -29,21 +29,7 @@ export default function DashboardPage() {
   const [loading, setLoading] = useState(true);
   const [actionLoading, setActionLoading] = useState<string | null>(null);
 
-  useEffect(() => {
-    if (!isAuthenticated || !user) {
-      router.push('/login');
-      return;
-    }
-
-    if (user.role === 'admin') {
-      router.push('/admin-dashboard');
-      return;
-    }
-
-    fetchOverview();
-  }, [isAuthenticated, user, router]);
-
-  const fetchOverview = async () => {
+  const fetchOverview = useCallback(async () => {
     if (!user) return;
 
     try {
@@ -60,7 +46,21 @@ export default function DashboardPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [user]);
+
+  useEffect(() => {
+    if (!isAuthenticated || !user) {
+      router.push('/login');
+      return;
+    }
+
+    if (user.role === 'admin') {
+      router.push('/admin-dashboard');
+      return;
+    }
+
+    fetchOverview();
+  }, [isAuthenticated, user, router, fetchOverview]);
 
   const handleExportRequest = async () => {
     if (!user) return;
